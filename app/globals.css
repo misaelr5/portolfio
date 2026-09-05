@@ -168,8 +168,8 @@ button {
 
 .language-switch {
   display: inline-flex;
-  min-width: 2.35rem;
-  min-height: 2rem;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
   align-items: center;
   justify-content: center;
   padding: 0.25rem 0.6rem;
@@ -237,6 +237,7 @@ button {
 .copy-button {
   display: grid;
   min-width: 3.4rem;
+  min-height: 2.5rem;
   padding: 4px 9px;
   cursor: pointer;
   border: 1px solid transparent;
@@ -485,6 +486,7 @@ button {
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   padding-top: 4px;
 }
@@ -643,20 +645,26 @@ button {
   }
 
   .header-inner {
+    position: relative;
+    display: block;
     min-height: 96px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 5px;
     padding-top: 13px;
     padding-bottom: 13px;
   }
 
-  .header-contact {
-    width: auto;
+  .header-actions {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
   }
 
-  .header-actions {
+  .language-control {
+    position: absolute;
+    top: 13px;
+    right: var(--gutter);
+  }
+
+  .header-contact {
     width: 100%;
     justify-content: space-between;
   }
