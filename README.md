@@ -1,29 +1,74 @@
-# Misael Ledesma — Portfolio
+# Misael Ledesma — Developer Portfolio
 
-Production-oriented personal portfolio built with Next.js 16, React, TypeScript, and Tailwind CSS.
+Personal portfolio built to present my work as a **Full Stack Developer**, with a focus on TypeScript, React, Next.js and production-oriented web applications.
+
+The site is designed as a bilingual portfolio for recruiters, clients and collaborators.
+
+## Tech stack
+
+- **Next.js 16**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Vercel-ready deployment**
+
+## Main features
+
+- English and Spanish versions
+- Statically rendered localized routes
+- SEO metadata per language
+- Canonical URLs
+- Language alternate metadata
+- Responsive UI
+- Accessible navigation and labels
+- Project showcase architecture
+- Sitemap and robots configuration
+- Production URL configuration through environment variables
+
+## Routes
+
+```text
+/en  → English
+/es  → Español
+```
+
+The language switcher uses regular links, so navigation remains functional even without client-side JavaScript.
+
+## Project structure
+
+Portfolio content is centralized to keep project data and translations maintainable.
+
+```text
+data/portfolio.ts   → localized portfolio content
+lib/i18n.ts         → locale configuration and route helpers
+lib/site.ts         → shared identity and links
+public/projects/    → project screenshots and assets
+```
 
 ## Local development
 
-Requirements:
+### Requirements
 
-- Node.js 20.9 or newer
+- Node.js 20.9+
 - npm
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Start development server:
+
+```bash
 npm run dev
 ```
 
-Open `http://localhost:3000`. The root redirects to the default English route.
+Open:
 
-## Languages
-
-- English: `/en`
-- Spanish: `/es`
-
-Both routes are statically rendered with localized metadata, canonical URLs,
-language alternates, accessible labels, and content. The language switcher is a
-regular link, so it keeps working without client-side JavaScript.
+```text
+http://localhost:3000
+```
 
 ## Validation
 
@@ -33,20 +78,36 @@ npm run typecheck
 npm run build
 ```
 
-## Content updates
+## Production configuration
 
-- English and Spanish content: `data/portfolio.ts`
-- Supported locales and route helpers: `lib/i18n.ts`
-- Shared identity and links: `lib/site.ts`
+Copy the environment template:
 
-Project images are optional and supported by the `image` field in each localized
-project entry. Add final screenshots under `public/projects/`; no mock project
-imagery is included.
+```bash
+cp .env.example .env.local
+```
 
-## Production URL
+Then configure:
 
-Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` to the final origin. Vercel deployment URLs are used automatically when that variable is absent. The canonical URL, robots file, and sitemap all use the same source.
+```env
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
 
-## Open Graph image
+The application uses the same origin source for canonical metadata, `robots.txt` and the sitemap.
 
-Metadata is ready for sharing, but an image is intentionally not referenced until a real branded asset exists. Add a final localized Open Graph image (1200 × 630) when the production brand image is approved.
+## About me
+
+I'm a Full Stack Developer based in Córdoba, Argentina, currently focused on building real-world applications and strengthening my experience with:
+
+- TypeScript
+- React
+- Next.js
+- Node.js
+- PostgreSQL
+- SQL
+- Backend architecture
+
+My projects include internal business management systems, CRM software, commercial websites and automation-oriented solutions.
+
+---
+
+**Developer:** [Misael Ledesma](https://github.com/misaelr5)
