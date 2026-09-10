@@ -194,30 +194,140 @@ const englishContent = {
     },
     entries: [
       {
-        title: "Business Management System / CRM",
+        title: "WordPress Malware Remediation & Security Hardening",
         context:
-          "A custom operational system designed around real business workflows.",
+          "A real compromised WordPress environment requiring investigation, cleanup and recovery while preserving legitimate data.",
         solution:
-          "A focused management and customer relationship solution shaped around the business process it supports.",
+          "Backed up files and the database, analyzed indicators of compromise, detected and removed webshells and injected code, replaced the WordPress core with a verified installation, and applied hardening measures to reduce the risk of persistence or reinfection.",
+        role: "Cybersecurity & WordPress Security",
+        technicalDetails: [
+          "File and database backups",
+          "Indicators of compromise, webshells and injected code",
+          "Verified core replacement and security hardening",
+        ],
       },
       {
-        title: "Real-Time Currency Solution",
+        title: "Más Servicios",
         context:
-          "A currency conversion and quotation solution integrated into a real business website.",
+          "Commercial website for an integrated services center.",
         solution:
-          "A real-time experience that brings current currency information into the website's customer journey.",
+          "A self-managed website with services, branches, maps, FAQ, forms and WhatsApp access.",
+        role: "Web Developer",
+        technicalDetails: [
+          "WordPress",
+          "Web design",
+          "Content-management training",
+        ],
       },
       {
         title: "Reac Studio",
-        context: "Website and digital platform for Reac Studio.",
+        context:
+          "Commercial website and digital platform for Reac Studio.",
         solution:
           "A production web presence designed to communicate the studio's services and create a direct path to contact.",
         role: "Co-Founder & Full-Stack Developer",
+        technicalDetails: ["Website development", "Contact journey"],
         links: [
           {
             label: "Live site",
-            href: "https://reacs-studio.vercel.app/",
+            href: "https://reacstudio.com/",
           },
+        ],
+      },
+      {
+        title: "Modular Admin Panel",
+        context:
+          "Commercial internal system designed to organize operations through modular workflows.",
+        solution:
+          "A modular structure with access control, forms and operational reports.",
+        role: "Developer",
+        technicalDetails: [
+          "Custom internal system",
+          "Final technologies and scope pending confirmation",
+        ],
+      },
+      {
+        title: "Misael Ledesma Portfolio",
+        context:
+          "Personal full-stack developer portfolio that brings together professional information, projects and contact options.",
+        solution:
+          "A personal website with a professional introduction, projects and contact links in one place.",
+        role: "Full-Stack Developer",
+        technicalDetails: ["Website design", "Website development"],
+        links: [
+          {
+            label: "Live site",
+            href: "https://misaelr5.vercel.app/",
+          },
+        ],
+      },
+      {
+        title: "Commercial CRM",
+        context:
+          "Academic management system for centralizing customer information and commercial follow-up.",
+        solution:
+          "A central dashboard for managing customers, projects, leads, payments and notes.",
+        role: "Developer",
+        technicalDetails: [
+          "Web management system",
+          "Final technologies and scope pending confirmation",
+        ],
+      },
+      {
+        title: "Fashion E-commerce",
+        context:
+          "Academic online store designed to showcase and sell clothing products.",
+        solution:
+          "A catalog, product pages and a shopping-cart flow prepared for payment integration.",
+        role: "Developer",
+        technicalDetails: [
+          "Online store",
+          "Final technologies and scope pending confirmation",
+        ],
+      },
+      {
+        title: "Professional Landing Page",
+        context:
+          "Academic landing page designed to present professional services and make contact easier.",
+        solution:
+          "A responsive page with a commercial structure, direct contact and a focus on conversion.",
+        role: "Developer",
+        technicalDetails: [
+          "Landing page",
+          "Final technologies and scope pending confirmation",
+        ],
+      },
+      {
+        title: "Tax Fraud Detection",
+        context:
+          "Academic data-science project for analyzing tax declarations.",
+        solution:
+          "A classification model to analyze patterns that may indicate declarations at risk of fraud.",
+        role: "Developer",
+        technicalDetails: ["Python", "Machine Learning"],
+      },
+      {
+        title: "Pomodoro Focus App",
+        context:
+          "Personal productivity application focused on concentration and distraction-free work or study sessions.",
+        solution:
+          "An app with focus modes, session tasks, history and exportable statistics.",
+        role: "Developer",
+        technicalDetails: [
+          "Productivity application",
+          "Final technologies pending confirmation",
+        ],
+      },
+      {
+        title: "Portfolio Website",
+        context:
+          "Personal website for bringing services, work and contact options into one digital presence.",
+        solution:
+          "A portfolio with a services catalog, selected work and a contact form.",
+        role: "Developer",
+        technicalDetails: [
+          "Personal website",
+          "Final technologies and scope pending confirmation",
         ],
       },
     ],
@@ -339,30 +449,140 @@ const spanishContent = {
     },
     entries: [
       {
-        title: "Sistema de gestión empresarial / CRM",
+        title: "Remediación de malware y hardening de WordPress",
         context:
-          "Un sistema operativo personalizado, diseñado alrededor de flujos de trabajo reales de una empresa.",
+          "Un entorno real de WordPress comprometido que requería investigación, limpieza y recuperación, preservando los datos legítimos.",
         solution:
-          "Una solución enfocada en la gestión y la relación con clientes, adaptada al proceso de negocio que acompaña.",
+          "Realicé backups de archivos y base de datos, analicé indicadores de compromiso, detecté y eliminé webshells y código inyectado, reemplacé el core de WordPress por una instalación verificada y apliqué medidas de hardening para reducir el riesgo de persistencia o reinfección.",
+        role: "Ciberseguridad y seguridad WordPress",
+        technicalDetails: [
+          "Backups de archivos y base de datos",
+          "Indicadores de compromiso, webshells y código inyectado",
+          "Reemplazo de core verificado y hardening de seguridad",
+        ],
       },
       {
-        title: "Solución de cotización de monedas en tiempo real",
+        title: "Más Servicios",
         context:
-          "Una solución de conversión y cotización de monedas integrada en el sitio web de un negocio real.",
+          "Sitio web comercial para un centro integral de servicios.",
         solution:
-          "Una experiencia en tiempo real que incorpora información cambiaria actualizada al recorrido del cliente dentro del sitio.",
+          "Un sitio autogestionable con servicios, sucursales, mapas, FAQ, formularios y acceso a WhatsApp.",
+        role: "Desarrollador web",
+        technicalDetails: [
+          "WordPress",
+          "Diseño web",
+          "Capacitación de gestión",
+        ],
       },
       {
         title: "Reac Studio",
-        context: "Sitio web y plataforma digital para Reac Studio.",
+        context:
+          "Sitio web y plataforma digital comercial para Reac Studio.",
         solution:
           "Una presencia web en producción diseñada para comunicar los servicios del estudio y crear un camino directo al contacto.",
         role: "Cofundador y desarrollador Full-Stack",
+        technicalDetails: ["Desarrollo web", "Flujo de contacto"],
         links: [
           {
             label: "Ver sitio",
-            href: "https://reacs-studio.vercel.app/",
+            href: "https://reacstudio.com/",
           },
+        ],
+      },
+      {
+        title: "Panel Administrativo Modular",
+        context:
+          "Sistema interno comercial pensado para ordenar operaciones mediante flujos modulares.",
+        solution:
+          "Una estructura modular con control de acceso, formularios y reportes operativos.",
+        role: "Desarrollador",
+        technicalDetails: [
+          "Sistema interno a medida",
+          "Tecnologías y alcance final pendientes de confirmar",
+        ],
+      },
+      {
+        title: "Portfolio de Misael Ledesma",
+        context:
+          "Portfolio personal de desarrollador full-stack que reúne información profesional, proyectos y vías de contacto.",
+        solution:
+          "Un sitio personal con presentación profesional, proyectos y enlaces de contacto en un solo lugar.",
+        role: "Desarrollador Full-Stack",
+        technicalDetails: ["Diseño de sitio web", "Desarrollo de sitio web"],
+        links: [
+          {
+            label: "Ver sitio",
+            href: "https://misaelr5.vercel.app/",
+          },
+        ],
+      },
+      {
+        title: "CRM Comercial",
+        context:
+          "Sistema académico de gestión para centralizar información de clientes y seguimiento comercial.",
+        solution:
+          "Un panel centralizado para gestionar clientes, proyectos, leads, pagos y notas.",
+        role: "Desarrollador",
+        technicalDetails: [
+          "Sistema de gestión web",
+          "Tecnologías y alcance final pendientes de confirmar",
+        ],
+      },
+      {
+        title: "E-commerce de Indumentaria",
+        context:
+          "Tienda online académica orientada a presentar y vender productos de indumentaria.",
+        solution:
+          "Un catálogo, fichas de producto y flujo de carrito preparado para integrar pagos.",
+        role: "Desarrollador",
+        technicalDetails: [
+          "Tienda online",
+          "Tecnologías y alcance final pendientes de confirmar",
+        ],
+      },
+      {
+        title: "Landing para Profesional",
+        context:
+          "Landing académica orientada a presentar servicios profesionales y facilitar el contacto.",
+        solution:
+          "Una página responsive con estructura comercial, contacto directo y foco en conversión.",
+        role: "Desarrollador",
+        technicalDetails: [
+          "Landing page",
+          "Tecnologías y alcance final pendientes de confirmar",
+        ],
+      },
+      {
+        title: "Detección de Fraude Fiscal",
+        context:
+          "Proyecto académico de ciencia de datos orientado al análisis de declaraciones impositivas.",
+        solution:
+          "Un modelo de clasificación para analizar patrones que pueden señalar declaraciones con riesgo de fraude.",
+        role: "Desarrollador",
+        technicalDetails: ["Python", "Machine Learning"],
+      },
+      {
+        title: "App de Enfoque Pomodoro",
+        context:
+          "Aplicación personal de productividad enfocada en concentración y sesiones de trabajo o estudio sin distracciones.",
+        solution:
+          "Una aplicación con modos de enfoque, tareas por sesión, historial y estadísticas exportables.",
+        role: "Desarrollador",
+        technicalDetails: [
+          "Aplicación de productividad",
+          "Tecnologías finales pendientes de confirmar",
+        ],
+      },
+      {
+        title: "Portfolio Web",
+        context:
+          "Sitio personal para reunir servicios, trabajos y vías de contacto en una sola presencia digital.",
+        solution:
+          "Un portfolio con catálogo de servicios, trabajos seleccionados y formulario de contacto.",
+        role: "Desarrollador",
+        technicalDetails: [
+          "Sitio personal",
+          "Tecnologías y alcance final pendientes de confirmar",
         ],
       },
     ],
