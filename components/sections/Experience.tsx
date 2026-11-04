@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { ExternalLink } from "@/components/ui/ExternalLink";
 import type { PortfolioContent } from "@/data/portfolio";
 
 type ExperienceProps = {
@@ -24,13 +25,28 @@ export function Experience({ content }: ExperienceProps) {
                   <span>{entry.organization}</span>
                   <span className="muted-text"> / {entry.role}</span>
                 </h3>
-                <p className="experience-period">{entry.period}</p>
+                {entry.period ? (
+                  <p className="experience-period">{entry.period}</p>
+                ) : null}
               </div>
               <ul className="experience-highlights">
                 {entry.highlights.map((highlight) => (
                   <li key={highlight}>{highlight}</li>
                 ))}
               </ul>
+              {entry.links?.length ? (
+                <div className="project-links">
+                  {entry.links.map((link) => (
+                    <ExternalLink
+                      className="text-link"
+                      href={link.href}
+                      key={link.href}
+                    >
+                      {link.label}
+                    </ExternalLink>
+                  ))}
+                </div>
+              ) : null}
             </article>
           ))}
         </div>

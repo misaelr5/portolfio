@@ -54,7 +54,8 @@ export type PortfolioContent = {
     entries: readonly {
       organization: string;
       role: string;
-      period: string;
+      period?: string;
+      links?: readonly { label: string; href: string }[];
       highlights: readonly string[];
     }[];
   };
@@ -202,25 +203,79 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       label: "Experience",
       entries: [
         {
+          organization: "WordPress Malware Remediation",
+          role: "Investigation & Security Hardening",
+          highlights: [
+            "Investigated a compromised WordPress environment and analyzed indicators of compromise, webshells and injected code.",
+            "Backed up files and the database before remediation to preserve legitimate content.",
+            "Removed identified malicious code and replaced the WordPress core with a verified installation.",
+            "Applied security hardening measures as part of the website recovery.",
+          ],
+        },
+        {
           organization: "Reac Studio",
           role: "Co-Founder & Full-Stack Developer",
           period: "Aug 2026 — Present",
           highlights: [
-            "Analyze client requirements and design technical solutions and application architecture.",
-            "Develop Full Stack websites, API integrations and database-backed systems.",
+            "Analyze client requirements, design technical solutions and application architecture, and communicate engineering decisions directly with clients.",
+            "Develop Full Stack websites, API integrations and database-backed systems, and collaborate with the marketing team on technical delivery.",
             "Configure infrastructure and domains, deploy to production, and maintain performance and application security.",
-            "Communicate technical decisions to clients and collaborate with marketing on project delivery.",
+            "Built the agency website with static HTML, CSS and JavaScript, dedicated service pages, technical SEO and structured data on Vercel.",
+            "Implemented TypeScript serverless contact processing with validation and documented antispam controls.",
+          ],
+          links: [
+            {
+              label: "Visit agency",
+              href: "https://reacstudio.com",
+            },
           ],
         },
         {
-          organization: "Freelance",
-          role: "Full-Stack Web Developer",
-          period: "2026 — Present",
+          organization: "Travel Days",
+          role: "Full-Stack Web Developer — Reac Studio",
           highlights: [
-            "Built and maintained production websites and custom web solutions for real businesses.",
-            "Developed business tools including real-time currency solutions, customer management systems and operational dashboards.",
-            "Integrated APIs, databases, authentication and business logic into responsive web interfaces.",
-            "Worked across development, deployment, debugging, security and ongoing technical improvements.",
+            "Developed a responsive tourism website with Next.js, React, TypeScript and Tailwind CSS for a travel agency in Villa Dolores, Córdoba.",
+            "Organized destinations, school travel programs, photographs, videos and testimonials through reusable components.",
+            "Implemented WhatsApp inquiry flows, technical SEO, Cloudflare deployment and domain configuration.",
+            "Delivered the commercial website scope; passenger accounts, bookings and payments are not part of this implementation.",
+          ],
+          links: [
+            {
+              label: "Visit website",
+              href: "https://traveldays.tur.ar",
+            },
+          ],
+        },
+        {
+          organization: "Modular Admin Panel",
+          role: "Internal Business System Developer",
+          highlights: [
+            "Worked on a custom internal system to organize business operations through modular workflows.",
+            "Structured access control, forms and operational reports.",
+          ],
+        },
+        {
+          organization: "Más Servicios",
+          role: "Web Developer",
+          highlights: [
+            "Developed a self-managed WordPress website for an integrated services center.",
+            "Organized services, branches, maps and frequently asked questions, with forms and direct WhatsApp access.",
+            "Provided content-management training so the business could maintain the website.",
+          ],
+        },
+        {
+          organization: "Comunidad Cristiana Villa Sarmiento",
+          role: "Web Developer",
+          highlights: [
+            "Developed a multi-page community website with Astro, TypeScript and Tailwind CSS to present identity, meetings, ministries and visitor information.",
+            "Implemented static pages, structured content, responsive layouts, accessible navigation and reduced-motion support.",
+            "Kept technical delivery separate from institutional publication approval; the project remains presented as under review.",
+          ],
+          links: [
+            {
+              label: "View website · under review",
+              href: "https://comunidadcristianavillasarmiento.com",
+            },
           ],
         },
       ],
@@ -538,25 +593,79 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       label: "Experiencia",
       entries: [
         {
+          organization: "Remediación de malware en WordPress",
+          role: "Investigación y hardening de seguridad",
+          highlights: [
+            "Investigué un entorno WordPress comprometido y analicé indicadores de compromiso, webshells y código inyectado.",
+            "Realicé backups de archivos y base de datos antes de intervenir para preservar el contenido legítimo.",
+            "Eliminé el código malicioso identificado y reemplacé el core de WordPress por una instalación verificada.",
+            "Apliqué medidas de hardening como parte de la recuperación del sitio.",
+          ],
+        },
+        {
           organization: "Reac Studio",
           role: "Cofundador y desarrollador Full Stack",
           period: "Ago 2026 — Actualidad",
           highlights: [
-            "Analizo requerimientos de clientes y diseño soluciones técnicas y arquitectura de aplicaciones.",
-            "Desarrollo sitios Full Stack, integraciones de APIs y sistemas con bases de datos.",
+            "Analizo requerimientos de clientes, diseño soluciones técnicas y arquitectura de aplicaciones, y comunico decisiones de ingeniería directamente con los clientes.",
+            "Desarrollo sitios Full Stack, integraciones de APIs y sistemas con bases de datos, y colaboro con marketing en la entrega técnica.",
             "Configuro infraestructura y dominios, realizo despliegues y mantengo el rendimiento y la seguridad de las aplicaciones.",
-            "Comunico decisiones técnicas a clientes y colaboro con marketing en la entrega de proyectos.",
+            "Desarrollé la web de la agencia con HTML estático, CSS y JavaScript, páginas de servicios, SEO técnico y datos estructurados en Vercel.",
+            "Implementé el procesamiento de contacto serverless en TypeScript con validación y controles antispam documentados.",
+          ],
+          links: [
+            {
+              label: "Visitar agencia",
+              href: "https://reacstudio.com",
+            },
           ],
         },
         {
-          organization: "Freelance",
-          role: "Desarrollador web Full-Stack",
-          period: "2026 — Actualidad",
+          organization: "Travel Days",
+          role: "Desarrollador web Full Stack — Reac Studio",
           highlights: [
-            "Desarrollé y mantuve sitios web en producción y soluciones web personalizadas para negocios reales.",
-            "Construí herramientas empresariales, incluyendo soluciones de cotización de monedas en tiempo real, sistemas de gestión de clientes y paneles operativos.",
-            "Integré APIs, bases de datos, autenticación y lógica de negocio en interfaces web responsive.",
-            "Trabajé en desarrollo, despliegue, depuración, seguridad y mejoras técnicas continuas.",
+            "Desarrollé un sitio de turismo responsive con Next.js, React, TypeScript y Tailwind CSS para una agencia de Villa Dolores, Córdoba.",
+            "Organicé destinos, viajes escolares, fotografías, videos y testimonios mediante componentes reutilizables.",
+            "Implementé consultas por WhatsApp, SEO técnico, despliegue en Cloudflare y configuración del dominio.",
+            "El alcance entregado es el sitio comercial; no incluye cuentas de pasajeros, reservas ni pagos.",
+          ],
+          links: [
+            {
+              label: "Visitar web",
+              href: "https://traveldays.tur.ar",
+            },
+          ],
+        },
+        {
+          organization: "Panel Administrativo Modular",
+          role: "Desarrollador de sistema interno",
+          highlights: [
+            "Trabajé en un sistema interno a medida para organizar operaciones de negocio mediante flujos modulares.",
+            "Estructuré control de acceso, formularios y reportes operativos.",
+          ],
+        },
+        {
+          organization: "Más Servicios",
+          role: "Desarrollador web",
+          highlights: [
+            "Desarrollé un sitio autogestionable en WordPress para un centro integral de servicios.",
+            "Organicé servicios, sucursales, mapas y preguntas frecuentes, con formularios y acceso directo a WhatsApp.",
+            "Brindé capacitación de gestión de contenido para que el negocio pudiera mantener el sitio.",
+          ],
+        },
+        {
+          organization: "Comunidad Cristiana Villa Sarmiento",
+          role: "Desarrollador web",
+          highlights: [
+            "Desarrollé un sitio comunitario de varias páginas con Astro, TypeScript y Tailwind CSS para presentar identidad, reuniones, ministerios e información para visitantes.",
+            "Implementé páginas estáticas, contenido estructurado, diseño responsive, navegación accesible y soporte de movimiento reducido.",
+            "Separé la entrega técnica de la aprobación institucional de publicación; el proyecto sigue presentado como en revisión.",
+          ],
+          links: [
+            {
+              label: "Ver web · en revisión",
+              href: "https://comunidadcristianavillasarmiento.com",
+            },
           ],
         },
       ],
