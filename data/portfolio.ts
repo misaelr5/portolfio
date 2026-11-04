@@ -1,5 +1,4 @@
 import type { Locale } from "@/lib/i18n";
-import { professionalContent } from "@/data/professional";
 
 export type PortfolioContent = {
   meta: {
@@ -68,8 +67,6 @@ export type PortfolioContent = {
       selectedDetails: string;
     };
     entries: readonly {
-      id: string;
-      category: "client" | "personal" | "academic";
       title: string;
       context: string;
       solution: string;
@@ -128,12 +125,79 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       label: "About",
       paragraphs: [
         "I'm a Full-Stack Web Developer focused on building modern, reliable and scalable web applications. I combine frontend development, backend logic and databases to build complete digital products.",
-        "Alongside client work as a co-founder of Reac Studio, I keep learning independently and building open-source projects. Self-directed study and hands-on experimentation help me develop my engineering judgment and explore new technical problems.",
+        "I've worked on real-world projects including custom CRM systems, business management tools, real-time currency solutions and production websites. I care about clean architecture, maintainable code, performance, security and creating software that solves actual business problems — not just projects made to complete a course.",
         "I'm based in Córdoba, Argentina, and open to remote, full-time, contract and freelance opportunities. I'm especially interested in teams where I can keep growing as an engineer, take ownership of real products and contribute from development to production.",
+        "Alongside client work as a co-founder of Reac Studio, I keep learning independently and building open-source projects. Self-directed study and hands-on experimentation help me develop my engineering judgment and explore new technical problems.",
+        "I'm particularly interested in cybersecurity, open-source intelligence (OSINT), digital investigations and data-driven analysis. I aim to combine my software engineering background with investigative methodologies, information analysis and security research.",
       ],
       cta: "Explore projects",
     },
-    stack: professionalContent.en.stack,
+    stack: {
+      label: "Technologies",
+      applied: "Applied experience",
+      learning: "Developing knowledge",
+      note: "Applied experience reflects client work and personal or academic projects. Developing knowledge identifies areas of ongoing study, without implying professional delivery.",
+      groups: [
+        {
+          title: "Frontend",
+          items: [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript",
+            "Astro",
+            "Tailwind CSS",
+            "HTML & CSS",
+          ],
+          learning: [],
+        },
+        {
+          title: "Backend & APIs",
+          items: [
+            "Node.js",
+            "REST APIs",
+            "API Integration",
+            "Backend Architecture",
+            "Server-Side Logic",
+          ],
+          learning: ["Authentication", "Authorization"],
+        },
+        {
+          title: "Databases & Data",
+          items: ["PostgreSQL", "SQL", "Database Modeling", "Python"],
+          learning: ["Supabase", "Row Level Security"],
+        },
+        {
+          title: "Cloud & DevOps",
+          items: [
+            "Cloudflare",
+            "Cloudflare DNS",
+            "Vercel",
+            "Git & GitHub",
+            "Production Deployment",
+            "Domain Configuration",
+          ],
+          learning: ["Cloudflare Workers", "CI/CD Fundamentals"],
+        },
+        {
+          title: "Cybersecurity",
+          items: ["WordPress Remediation", "Security Hardening"],
+          learning: [
+            "Web Application Security",
+            "Secure Coding",
+            "Vulnerability Assessment",
+            "OSINT",
+            "OWASP Top 10",
+            "Access Control",
+          ],
+        },
+        {
+          title: "Additional",
+          items: ["PHP", "Laravel", "WordPress", "Automation"],
+          learning: [],
+        },
+      ],
+    },
     experience: {
       label: "Experience",
       entries: [
@@ -171,6 +235,19 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       },
       entries: [
         {
+          title: "WordPress Malware Remediation & Security Hardening",
+          context:
+            "A real compromised WordPress environment requiring investigation, cleanup and recovery while preserving legitimate data.",
+          solution:
+            "Backed up files and the database, analyzed indicators of compromise, detected and removed webshells and injected code, replaced the WordPress core with a verified installation, and applied hardening measures to reduce the risk of persistence or reinfection.",
+          role: "Cybersecurity & WordPress Security",
+          technicalDetails: [
+            "File and database backups",
+            "Indicators of compromise, webshells and injected code",
+            "Verified core replacement and security hardening",
+          ],
+        },
+        {
           title: "Más Servicios",
           context: "Commercial website for an integrated services center.",
           solution:
@@ -181,8 +258,27 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Web design",
             "Content-management training",
           ],
-          id: "mas-servicios",
-          category: "client",
+        },
+        {
+          title: "Reac Studio",
+          context:
+            "Reac Studio is a software development and digital marketing agency based in Córdoba, Argentina. We help businesses modernize their digital presence, streamline operations and build technology-driven solutions through custom software, web development, digital marketing and automation.",
+          solution:
+            "A production web presence designed to communicate the studio's services and create a direct path to contact.",
+          role: "Co-Founder & Full-Stack Developer",
+          technicalDetails: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "Vercel",
+          ],
+          links: [
+            {
+              label: "Live site",
+              href: "https://reacstudio.com/",
+            },
+          ],
         },
         {
           title: "Modular Admin Panel",
@@ -195,8 +291,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Custom internal system",
             "Final technologies and scope pending confirmation",
           ],
-          id: "modular-admin",
-          category: "client",
         },
         {
           title: "Misael Ledesma Portfolio",
@@ -212,8 +306,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://misaelr5.vercel.app/",
             },
           ],
-          id: "misael-portfolio",
-          category: "personal",
         },
         {
           title: "Commercial CRM",
@@ -226,8 +318,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Web management system",
             "Final technologies and scope pending confirmation",
           ],
-          id: "crm",
-          category: "academic",
         },
         {
           title: "Fashion E-commerce",
@@ -240,8 +330,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Online store",
             "Final technologies and scope pending confirmation",
           ],
-          id: "ecommerce",
-          category: "academic",
         },
         {
           title: "Professional Landing Page",
@@ -254,8 +342,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Landing page",
             "Final technologies and scope pending confirmation",
           ],
-          id: "professional-landing",
-          category: "academic",
         },
         {
           title: "Tax Fraud Detection",
@@ -265,8 +351,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "A classification model to analyze patterns that may indicate declarations at risk of fraud.",
           role: "Developer",
           technicalDetails: ["Python", "Machine Learning"],
-          id: "fraud-detection",
-          category: "academic",
         },
         {
           title: "Pomodoro Focus App",
@@ -279,8 +363,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Productivity application",
             "Final technologies pending confirmation",
           ],
-          id: "pomodoro",
-          category: "personal",
         },
         {
           title: "Portfolio Website",
@@ -293,8 +375,48 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Personal website",
             "Final technologies and scope pending confirmation",
           ],
-          id: "portfolio-website",
-          category: "personal",
+        },
+        {
+          title: "Travel Days — Tourism Website",
+          context:
+            "A tourism website bringing together destinations, school travel programs and multimedia content for an agency in Villa Dolores, Córdoba.",
+          solution:
+            "Eight destinations and school travel programs. Passenger testimonial videos and multimedia content. WhatsApp inquiry flows. Metadata, canonical URLs, sitemap and structured data.",
+          role: "Full-Stack Web Developer — Reac Studio",
+          technicalDetails: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Cloudflare",
+          ],
+          links: [
+            {
+              label: "Visit website",
+              href: "https://traveldays.tur.ar",
+            },
+          ],
+        },
+        {
+          title: "Comunidad Cristiana Villa Sarmiento",
+          context:
+            "A multi-page community website designed to communicate identity, meetings, ministries and practical information for visitors.",
+          solution:
+            "Identity, beliefs, ministries and visitor pages. Responsive editorial layouts. Accessible navigation and accordions. Reduced-motion support and structured content. Developed · institutional approval pending.",
+          role: "Web Developer",
+          technicalDetails: [
+            "Astro",
+            "TypeScript",
+            "Tailwind CSS",
+            "Static Site Generation",
+            "Accessibility",
+          ],
+          links: [
+            {
+              label: "View website · under review",
+              href: "https://comunidadcristianavillasarmiento.com",
+            },
+          ],
         },
       ],
     },
@@ -339,12 +461,79 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       label: "Sobre mí",
       paragraphs: [
         "Soy desarrollador web Full-Stack, enfocado en crear aplicaciones web modernas, confiables y escalables. Combino desarrollo frontend, lógica de backend y bases de datos para construir productos digitales completos.",
-        "Además del trabajo con empresas como cofundador de Reac Studio, mantengo una formación autodidacta constante y desarrollo proyectos de código abierto. El estudio independiente y la experimentación práctica me ayudan a mejorar mi criterio de ingeniería y explorar nuevos problemas técnicos.",
+        "Trabajé en proyectos reales que incluyen sistemas CRM personalizados, herramientas de gestión empresarial, soluciones de cotización de monedas en tiempo real y sitios web en producción. Me importan la arquitectura limpia, el código mantenible, el rendimiento, la seguridad y crear software que resuelva problemas reales de negocio, no solamente proyectos para completar un curso.",
         "Vivo en Córdoba, Argentina, y estoy disponible para oportunidades remotas, full-time, por contrato y freelance. Me interesan especialmente los equipos donde pueda seguir creciendo como ingeniero, asumir responsabilidad sobre productos reales y contribuir desde el desarrollo hasta producción.",
+        "Además del trabajo con empresas como cofundador de Reac Studio, mantengo una formación autodidacta constante y desarrollo proyectos de código abierto. El estudio independiente y la experimentación práctica me ayudan a mejorar mi criterio de ingeniería y explorar nuevos problemas técnicos.",
+        "Me interesan especialmente la ciberseguridad, la inteligencia de fuentes abiertas (OSINT), la investigación digital y el análisis de datos. Busco combinar mis conocimientos de ingeniería de software con metodologías de investigación, análisis de información e investigación en seguridad.",
       ],
       cta: "Ver proyectos",
     },
-    stack: professionalContent.es.stack,
+    stack: {
+      label: "Tecnologías",
+      applied: "Experiencia aplicada",
+      learning: "En formación",
+      note: "La experiencia aplicada incluye trabajos para clientes y proyectos personales o académicos. Las áreas en formación corresponden al aprendizaje continuo y no implican entregas profesionales.",
+      groups: [
+        {
+          title: "Frontend",
+          items: [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript",
+            "Astro",
+            "Tailwind CSS",
+            "HTML y CSS",
+          ],
+          learning: [],
+        },
+        {
+          title: "Backend y APIs",
+          items: [
+            "Node.js",
+            "APIs REST",
+            "Integración de APIs",
+            "Arquitectura backend",
+            "Lógica del servidor",
+          ],
+          learning: ["Autenticación", "Autorización"],
+        },
+        {
+          title: "Bases de datos y datos",
+          items: ["PostgreSQL", "SQL", "Modelado de bases de datos", "Python"],
+          learning: ["Supabase", "Row Level Security"],
+        },
+        {
+          title: "Cloud y DevOps",
+          items: [
+            "Cloudflare",
+            "Cloudflare DNS",
+            "Vercel",
+            "Git y GitHub",
+            "Despliegues en producción",
+            "Configuración de dominios",
+          ],
+          learning: ["Cloudflare Workers", "Fundamentos de CI/CD"],
+        },
+        {
+          title: "Ciberseguridad",
+          items: ["Remediación WordPress", "Hardening"],
+          learning: [
+            "Seguridad de aplicaciones web",
+            "Código seguro",
+            "Evaluación de vulnerabilidades",
+            "OSINT",
+            "OWASP Top 10",
+            "Control de acceso",
+          ],
+        },
+        {
+          title: "Conocimientos adicionales",
+          items: ["PHP", "Laravel", "WordPress", "Automatización"],
+          learning: [],
+        },
+      ],
+    },
     experience: {
       label: "Experiencia",
       entries: [
@@ -382,6 +571,19 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       },
       entries: [
         {
+          title: "Remediación de malware y hardening de WordPress",
+          context:
+            "Un entorno real de WordPress comprometido que requería investigación, limpieza y recuperación, preservando los datos legítimos.",
+          solution:
+            "Realicé backups de archivos y base de datos, analicé indicadores de compromiso, detecté y eliminé webshells y código inyectado, reemplacé el core de WordPress por una instalación verificada y apliqué medidas de hardening para reducir el riesgo de persistencia o reinfección.",
+          role: "Ciberseguridad y seguridad WordPress",
+          technicalDetails: [
+            "Backups de archivos y base de datos",
+            "Indicadores de compromiso, webshells y código inyectado",
+            "Reemplazo de core verificado y hardening de seguridad",
+          ],
+        },
+        {
           title: "Más Servicios",
           context: "Sitio web comercial para un centro integral de servicios.",
           solution:
@@ -392,8 +594,27 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Diseño web",
             "Capacitación de gestión",
           ],
-          id: "mas-servicios",
-          category: "client",
+        },
+        {
+          title: "Reac Studio",
+          context:
+            "Reac Studio es una agencia de desarrollo de software y marketing digital con sede en Córdoba, Argentina. Ayudamos a empresas y profesionales a fortalecer su presencia digital, optimizar procesos y desarrollar soluciones tecnológicas mediante software a medida, desarrollo web, marketing digital y automatizaciones.",
+          solution:
+            "Una presencia web en producción diseñada para comunicar los servicios del estudio y crear un camino directo al contacto.",
+          role: "Cofundador y desarrollador Full Stack",
+          technicalDetails: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "Vercel",
+          ],
+          links: [
+            {
+              label: "Ver sitio",
+              href: "https://reacstudio.com/",
+            },
+          ],
         },
         {
           title: "Panel Administrativo Modular",
@@ -406,8 +627,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Sistema interno a medida",
             "Tecnologías y alcance final pendientes de confirmar",
           ],
-          id: "modular-admin",
-          category: "client",
         },
         {
           title: "Portfolio de Misael Ledesma",
@@ -423,8 +642,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://misaelr5.vercel.app/",
             },
           ],
-          id: "misael-portfolio",
-          category: "personal",
         },
         {
           title: "CRM Comercial",
@@ -437,8 +654,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Sistema de gestión web",
             "Tecnologías y alcance final pendientes de confirmar",
           ],
-          id: "crm",
-          category: "academic",
         },
         {
           title: "E-commerce de Indumentaria",
@@ -451,8 +666,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Tienda online",
             "Tecnologías y alcance final pendientes de confirmar",
           ],
-          id: "ecommerce",
-          category: "academic",
         },
         {
           title: "Landing para Profesional",
@@ -465,8 +678,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Landing page",
             "Tecnologías y alcance final pendientes de confirmar",
           ],
-          id: "professional-landing",
-          category: "academic",
         },
         {
           title: "Detección de Fraude Fiscal",
@@ -476,8 +687,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Un modelo de clasificación para analizar patrones que pueden señalar declaraciones con riesgo de fraude.",
           role: "Desarrollador",
           technicalDetails: ["Python", "Machine Learning"],
-          id: "fraud-detection",
-          category: "academic",
         },
         {
           title: "App de Enfoque Pomodoro",
@@ -490,8 +699,6 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Aplicación de productividad",
             "Tecnologías finales pendientes de confirmar",
           ],
-          id: "pomodoro",
-          category: "personal",
         },
         {
           title: "Portfolio Web",
@@ -504,8 +711,48 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Sitio personal",
             "Tecnologías y alcance final pendientes de confirmar",
           ],
-          id: "portfolio-website",
-          category: "personal",
+        },
+        {
+          title: "Travel Days — Sitio web de turismo",
+          context:
+            "Un sitio de turismo que reúne destinos, viajes escolares y contenido multimedia para una agencia de Villa Dolores, Córdoba.",
+          solution:
+            "Ocho destinos y programas de viajes escolares. Videos testimoniales y contenido multimedia. Consultas por WhatsApp. Metadata, URLs canónicas, sitemap y datos estructurados.",
+          role: "Desarrollador web Full Stack — Reac Studio",
+          technicalDetails: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Cloudflare",
+          ],
+          links: [
+            {
+              label: "Visitar web",
+              href: "https://traveldays.tur.ar",
+            },
+          ],
+        },
+        {
+          title: "Comunidad Cristiana Villa Sarmiento",
+          context:
+            "Un sitio de varias páginas para comunicar la identidad de la comunidad, sus reuniones, ministerios e información para visitantes.",
+          solution:
+            "Páginas de identidad, creencias, ministerios y visitas. Diseño editorial responsive. Navegación y acordeones accesibles. Movimiento reducido y contenido estructurado. Desarrollado · aprobación institucional pendiente.",
+          role: "Desarrollador web",
+          technicalDetails: [
+            "Astro",
+            "TypeScript",
+            "Tailwind CSS",
+            "Generación estática",
+            "Accesibilidad",
+          ],
+          links: [
+            {
+              label: "Ver web · en revisión",
+              href: "https://comunidadcristianavillasarmiento.com",
+            },
+          ],
         },
       ],
     },

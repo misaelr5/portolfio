@@ -17,7 +17,7 @@ export function Stack({ content }: StackProps) {
         <SectionLabel id="stack-title">{content.label}</SectionLabel>
 
         <div>
-          <p className="muted-text stack-note">{content.note}</p>
+          <p className="muted-text">{content.note}</p>
           <div className="stack-grid">
             {content.groups.map((group) => (
               <div className="stack-group" key={group.title}>
