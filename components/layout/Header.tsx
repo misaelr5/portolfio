@@ -7,15 +7,16 @@ import { siteConfig } from "@/lib/site";
 type HeaderProps = {
   locale: Locale;
   content: PortfolioContent;
+  path?: string;
 };
 
-export function Header({ locale, content }: HeaderProps) {
+export function Header({ locale, content, path = "" }: HeaderProps) {
   return (
     <header className="site-header intro-header">
       <div className="header-inner">
         <a
           className="brand text-link"
-          href="#top"
+          href={`/${locale}#top`}
           aria-label={content.accessibility.backToTop}
         >
           {siteConfig.name}
@@ -27,6 +28,7 @@ export function Header({ locale, content }: HeaderProps) {
             locale={locale}
             label={content.languageSwitcher.label}
             switchTo={content.languageSwitcher.switchTo}
+            path={path}
           />
           <div className="header-contact">
             <span className="availability">{content.profile.availability}</span>

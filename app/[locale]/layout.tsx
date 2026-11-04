@@ -62,9 +62,18 @@ export async function generateMetadata({
       title: content.meta.title,
       description: content.meta.description,
       siteName: "Misael Ledesma Portfolio",
+      images: [
+        {
+          url: `/${locale}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: content.meta.title,
+        },
+      ],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
+      images: [`/${locale}/opengraph-image`],
       title: content.meta.title,
       description: content.meta.description,
     },

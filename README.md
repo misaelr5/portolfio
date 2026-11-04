@@ -30,9 +30,15 @@ The site is designed as a bilingual portfolio for recruiters, clients and collab
 ```text
 /en  → English
 /es  → Español
+/en/projects/<slug> → English case study
+/es/projects/<slug> → Caso de estudio en español
 ```
 
-The language switcher uses regular links, so navigation remains functional even without client-side JavaScript.
+Case-study slugs: `travel-days`, `comunidad-cristiana`, `reac-studio`, `wordpress-security`.
+
+The existing language switcher preserves the equivalent case-study page. Content and links are server-rendered, and language links remain usable without client-side JavaScript.
+
+See [implementation and verification report](docs/PORTFOLIO-UPDATE.md) for evidence, project publication states and pending approvals. Portfolio deployment was authorized separately after local validation.
 
 ## Project structure
 
@@ -40,6 +46,8 @@ Portfolio content is centralized to keep project data and translations maintaina
 
 ```text
 data/portfolio.ts   → localized portfolio content
+data/professional.ts → bilingual stack, agency services and security interests
+data/case-studies.ts → typed bilingual case studies and labels
 lib/i18n.ts         → locale configuration and route helpers
 lib/site.ts         → shared identity and links
 public/projects/    → project screenshots and assets
