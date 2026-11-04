@@ -11,15 +11,19 @@ export function Experience({ content }: ExperienceProps) {
   return (
     <section
       className="section-boundary"
-      id="experience"
-      aria-labelledby="experience-title"
+      id="projects"
+      aria-labelledby="projects-title"
     >
       <Reveal>
-        <SectionLabel id="experience-title">{content.label}</SectionLabel>
+        <SectionLabel id="projects-title">{content.label}</SectionLabel>
 
         <div className="experience-list">
           {content.entries.map((entry) => (
-            <article className="experience-entry" key={entry.organization}>
+            <article
+              className="experience-entry"
+              key={entry.projectId}
+              data-project-id={entry.projectId}
+            >
               <div className="experience-heading">
                 <h3>
                   <span>{entry.organization}</span>

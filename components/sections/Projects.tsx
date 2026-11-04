@@ -5,16 +5,26 @@ import type { PortfolioContent } from "@/data/portfolio";
 
 export function Projects({
   content,
+  selectedProjectIds,
 }: {
   content: PortfolioContent["projects"];
+  selectedProjectIds: readonly string[];
 }) {
+  const selectedIds = new Set(selectedProjectIds);
+  const remainingProjects = content.entries.filter(
+    (project) => !selectedIds.has(project.id),
+  );
   return (
-    <section id="projects" aria-labelledby="projects-title">
+    <section id="other-projects" aria-labelledby="other-projects-title">
       <Reveal>
-        <SectionLabel id="projects-title">{content.label}</SectionLabel>
+        <SectionLabel id="other-projects-title">{content.label}</SectionLabel>
         <div className="experience-list">
-          {content.entries.map((project) => (
-            <article className="experience-entry" key={project.title}>
+          {remainingProjects.map((project) => (
+            <article
+              className="experience-entry"
+              key={project.id}
+              data-project-id={project.id}
+            >
               <div className="experience-heading">
                 <h3>
                   <span>{project.title}</span>

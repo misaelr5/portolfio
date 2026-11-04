@@ -52,6 +52,7 @@ export type PortfolioContent = {
   experience: {
     label: string;
     entries: readonly {
+      projectId: string;
       organization: string;
       role: string;
       period?: string;
@@ -68,6 +69,7 @@ export type PortfolioContent = {
       selectedDetails: string;
     };
     entries: readonly {
+      id: string;
       title: string;
       context: string;
       solution: string;
@@ -200,7 +202,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       ],
     },
     experience: {
-      label: "Experience",
+      label: "Selected projects",
       entries: [
         {
           organization: "WordPress Malware Remediation",
@@ -211,6 +213,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Removed identified malicious code and replaced the WordPress core with a verified installation.",
             "Applied security hardening measures as part of the website recovery.",
           ],
+          projectId: "wordpress-security",
         },
         {
           organization: "Reac Studio",
@@ -229,6 +232,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://reacstudio.com",
             },
           ],
+          projectId: "reac-studio",
         },
         {
           organization: "Travel Days",
@@ -245,6 +249,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://traveldays.tur.ar",
             },
           ],
+          projectId: "travel-days",
         },
         {
           organization: "Modular Admin Panel",
@@ -253,6 +258,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Worked on a custom internal system to organize business operations through modular workflows.",
             "Structured access control, forms and operational reports.",
           ],
+          projectId: "modular-admin",
         },
         {
           organization: "Más Servicios",
@@ -262,6 +268,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Organized services, branches, maps and frequently asked questions, with forms and direct WhatsApp access.",
             "Provided content-management training so the business could maintain the website.",
           ],
+          projectId: "mas-servicios",
         },
         {
           organization: "Institutional website",
@@ -277,11 +284,12 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://comunidadcristianavillasarmiento.com",
             },
           ],
+          projectId: "comunidad-cristiana",
         },
       ],
     },
     projects: {
-      label: "Selected Projects",
+      label: "Other projects",
       fieldLabels: {
         context: "Context",
         solution: "Solution",
@@ -301,6 +309,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Indicators of compromise, webshells and injected code",
             "Verified core replacement and security hardening",
           ],
+          id: "wordpress-security",
         },
         {
           title: "Más Servicios",
@@ -313,6 +322,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Web design",
             "Content-management training",
           ],
+          id: "mas-servicios",
         },
         {
           title: "Reac Studio",
@@ -334,6 +344,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://reacstudio.com/",
             },
           ],
+          id: "reac-studio",
         },
         {
           title: "Modular Admin Panel",
@@ -346,6 +357,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Custom internal system",
             "Final technologies and scope pending confirmation",
           ],
+          id: "modular-admin",
         },
         {
           title: "Misael Ledesma Portfolio",
@@ -361,6 +373,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://misaelr5.vercel.app/",
             },
           ],
+          id: "misael-portfolio",
         },
         {
           title: "Commercial CRM",
@@ -373,6 +386,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Web management system",
             "Final technologies and scope pending confirmation",
           ],
+          id: "crm",
         },
         {
           title: "Fashion E-commerce",
@@ -385,6 +399,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Online store",
             "Final technologies and scope pending confirmation",
           ],
+          id: "ecommerce",
         },
         {
           title: "Professional Landing Page",
@@ -397,6 +412,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Landing page",
             "Final technologies and scope pending confirmation",
           ],
+          id: "professional-landing",
         },
         {
           title: "Tax Fraud Detection",
@@ -406,6 +422,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "A classification model to analyze patterns that may indicate declarations at risk of fraud.",
           role: "Developer",
           technicalDetails: ["Python", "Machine Learning"],
+          id: "fraud-detection",
         },
         {
           title: "Pomodoro Focus App",
@@ -418,6 +435,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Productivity application",
             "Final technologies pending confirmation",
           ],
+          id: "pomodoro",
         },
         {
           title: "Portfolio Website",
@@ -430,6 +448,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Personal website",
             "Final technologies and scope pending confirmation",
           ],
+          id: "portfolio-website",
         },
         {
           title: "Travel Days — Tourism Website",
@@ -451,6 +470,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://traveldays.tur.ar",
             },
           ],
+          id: "travel-days",
         },
         {
           title: "Comunidad Cristiana Villa Sarmiento",
@@ -472,6 +492,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://comunidadcristianavillasarmiento.com",
             },
           ],
+          id: "comunidad-cristiana",
         },
       ],
     },
@@ -590,7 +611,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
       ],
     },
     experience: {
-      label: "Experiencia",
+      label: "Proyectos seleccionados",
       entries: [
         {
           organization: "Remediación de malware en WordPress",
@@ -601,6 +622,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Eliminé el código malicioso identificado y reemplacé el core de WordPress por una instalación verificada.",
             "Apliqué medidas de hardening como parte de la recuperación del sitio.",
           ],
+          projectId: "wordpress-security",
         },
         {
           organization: "Reac Studio",
@@ -619,6 +641,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://reacstudio.com",
             },
           ],
+          projectId: "reac-studio",
         },
         {
           organization: "Travel Days",
@@ -635,6 +658,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://traveldays.tur.ar",
             },
           ],
+          projectId: "travel-days",
         },
         {
           organization: "Panel Administrativo Modular",
@@ -643,6 +667,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Trabajé en un sistema interno a medida para organizar operaciones de negocio mediante flujos modulares.",
             "Estructuré control de acceso, formularios y reportes operativos.",
           ],
+          projectId: "modular-admin",
         },
         {
           organization: "Más Servicios",
@@ -652,6 +677,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Organicé servicios, sucursales, mapas y preguntas frecuentes, con formularios y acceso directo a WhatsApp.",
             "Brindé capacitación de gestión de contenido para que el negocio pudiera mantener el sitio.",
           ],
+          projectId: "mas-servicios",
         },
         {
           organization: "Página web institucional",
@@ -667,11 +693,12 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://comunidadcristianavillasarmiento.com",
             },
           ],
+          projectId: "comunidad-cristiana",
         },
       ],
     },
     projects: {
-      label: "Proyectos seleccionados",
+      label: "Otros proyectos",
       fieldLabels: {
         context: "Contexto",
         solution: "Solución",
@@ -691,6 +718,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Indicadores de compromiso, webshells y código inyectado",
             "Reemplazo de core verificado y hardening de seguridad",
           ],
+          id: "wordpress-security",
         },
         {
           title: "Más Servicios",
@@ -703,6 +731,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Diseño web",
             "Capacitación de gestión",
           ],
+          id: "mas-servicios",
         },
         {
           title: "Reac Studio",
@@ -724,6 +753,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://reacstudio.com/",
             },
           ],
+          id: "reac-studio",
         },
         {
           title: "Panel Administrativo Modular",
@@ -736,6 +766,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Sistema interno a medida",
             "Tecnologías y alcance final pendientes de confirmar",
           ],
+          id: "modular-admin",
         },
         {
           title: "Portfolio de Misael Ledesma",
@@ -751,6 +782,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://misaelr5.vercel.app/",
             },
           ],
+          id: "misael-portfolio",
         },
         {
           title: "CRM Comercial",
@@ -763,6 +795,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Sistema de gestión web",
             "Tecnologías y alcance final pendientes de confirmar",
           ],
+          id: "crm",
         },
         {
           title: "E-commerce de Indumentaria",
@@ -775,6 +808,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Tienda online",
             "Tecnologías y alcance final pendientes de confirmar",
           ],
+          id: "ecommerce",
         },
         {
           title: "Landing para Profesional",
@@ -787,6 +821,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Landing page",
             "Tecnologías y alcance final pendientes de confirmar",
           ],
+          id: "professional-landing",
         },
         {
           title: "Detección de Fraude Fiscal",
@@ -796,6 +831,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Un modelo de clasificación para analizar patrones que pueden señalar declaraciones con riesgo de fraude.",
           role: "Desarrollador",
           technicalDetails: ["Python", "Machine Learning"],
+          id: "fraud-detection",
         },
         {
           title: "App de Enfoque Pomodoro",
@@ -808,6 +844,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Aplicación de productividad",
             "Tecnologías finales pendientes de confirmar",
           ],
+          id: "pomodoro",
         },
         {
           title: "Portfolio Web",
@@ -820,6 +857,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
             "Sitio personal",
             "Tecnologías y alcance final pendientes de confirmar",
           ],
+          id: "portfolio-website",
         },
         {
           title: "Travel Days — Sitio web de turismo",
@@ -841,6 +879,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://traveldays.tur.ar",
             },
           ],
+          id: "travel-days",
         },
         {
           title: "Comunidad Cristiana Villa Sarmiento",
@@ -862,6 +901,7 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
               href: "https://comunidadcristianavillasarmiento.com",
             },
           ],
+          id: "comunidad-cristiana",
         },
       ],
     },

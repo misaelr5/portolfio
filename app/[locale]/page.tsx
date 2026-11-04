@@ -29,9 +29,14 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
         <div className="content-column" id="top">
           <Hero content={content} />
           <Experience content={content.experience} />
+          <Projects
+            content={content.projects}
+            selectedProjectIds={content.experience.entries.map(
+              (project) => project.projectId,
+            )}
+          />
           <About content={content.about} />
           <Stack content={content.stack} />
-          <Projects content={content.projects} />
         </div>
       </main>
       <Footer content={content} />
