@@ -23,7 +23,9 @@ export function Experience({ content }: ExperienceProps) {
               <div className="experience-heading">
                 <h3>
                   <span>{entry.organization}</span>
-                  <span className="muted-text"> / {entry.role}</span>
+                  {entry.role ? (
+                    <span className="muted-text"> / {entry.role}</span>
+                  ) : null}
                 </h3>
                 {entry.period ? (
                   <p className="experience-period">{entry.period}</p>

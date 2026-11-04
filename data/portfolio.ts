@@ -264,8 +264,8 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
           ],
         },
         {
-          organization: "Comunidad Cristiana Villa Sarmiento",
-          role: "Web Developer",
+          organization: "Institutional website",
+          role: "",
           highlights: [
             "Developed a multi-page community website with Astro, TypeScript and Tailwind CSS to present identity, meetings, ministries and visitor information.",
             "Implemented static pages, structured content, responsive layouts, accessible navigation and reduced-motion support.",
@@ -654,8 +654,8 @@ export const portfolioContent: Record<Locale, PortfolioContent> = {
           ],
         },
         {
-          organization: "Comunidad Cristiana Villa Sarmiento",
-          role: "Desarrollador web",
+          organization: "Página web institucional",
+          role: "",
           highlights: [
             "Desarrollé un sitio comunitario de varias páginas con Astro, TypeScript y Tailwind CSS para presentar identidad, reuniones, ministerios e información para visitantes.",
             "Implementé páginas estáticas, contenido estructurado, diseño responsive, navegación accesible y soporte de movimiento reducido.",
