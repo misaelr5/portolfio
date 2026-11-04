@@ -28,6 +28,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       <main className="main-content" id="main-content">
         <div className="content-column" id="top">
           <Hero content={content} />
+          <About content={content.about} />
           <Experience content={content.experience} />
           <Projects
             content={content.projects}
@@ -35,7 +36,6 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
               (project) => project.projectId,
             )}
           />
-          <About content={content.about} />
           <Stack content={content.stack} />
         </div>
       </main>
