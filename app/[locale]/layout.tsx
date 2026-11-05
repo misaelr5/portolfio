@@ -45,6 +45,17 @@ export async function generateMetadata({
     description: content.meta.description,
     applicationName: "Misael Ledesma Portfolio",
     authors: [{ name: siteConfig.name }],
+    category: "technology",
+    keywords: [
+      "Misael Ledesma",
+      "Full Stack Developer",
+      "Desarrollador Full Stack",
+      "Córdoba",
+      "Argentina",
+      "desarrollo web",
+      "ciberseguridad",
+      "desarrollo de software para empresas",
+    ],
     creator: siteConfig.name,
     alternates: {
       canonical: pathname,
@@ -76,6 +87,11 @@ export async function generateMetadata({
       images: [`/${locale}/opengraph-image`],
       title: content.meta.title,
       description: content.meta.description,
+    },
+    other: {
+      "geo.region": "AR-X",
+      "geo.placename": "Córdoba, Argentina",
+      "content-language": locale === "es" ? "es-AR" : "en",
     },
     robots: {
       index: true,
